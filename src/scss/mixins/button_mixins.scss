@@ -1,0 +1,49 @@
+@import '../variables/colors.scss';
+@import './fonts.scss';
+
+@mixin button_common_specs {
+  width: 16rem;
+  height: 4.8rem;
+  border: none;
+}
+
+@mixin btn_primary {
+  @include button_common_specs;
+  @include font_buttons;
+  background-color: $primary_color_dark_orange;
+  color: $primary_color_white_plain;
+
+  &:hover {
+    background-color: $primary_color_light_orange;
+    cursor: pointer;
+  }
+}
+
+@mixin btn_secondary {
+  @include button_common_specs;
+  @include font_buttons;
+  background-color: $primary_color_white_plain;
+  border: 1px solid $primary_color_black_1;
+  color: $primary_color_black_1;
+
+  &:hover {
+    background-color: $primary_color_black_1;
+    color: $primary_color_white_plain;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@mixin btn_link {
+  @include font_buttons;
+  color: $primary_color_black_1;
+  opacity: 0.5;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    color: $primary_color_dark_orange;
+    opacity: 1;
+    cursor: pointer;
+  }
+}

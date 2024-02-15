@@ -1,0 +1,101 @@
+@import '../variables/colors.scss';
+
+@mixin font_name {
+  font-family: 'Manrope';
+  font-style: normal;
+}
+
+@mixin font_basics {
+  @include font_name;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin H1 {
+  @include font_basics;
+  font-size: 5.6rem;
+  line-height: 5.8rem;
+  letter-spacing: 0.2rem;
+}
+
+@mixin H2 {
+  @include font_basics;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: 0.142857rem;
+}
+
+@mixin H3 {
+  @include font_basics;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.114286rem;
+}
+
+@mixin H4 {
+  @include font_basics;
+  font-size: 2.8rem;
+  line-height: 3.8rem;
+  letter-spacing: 0.2rem;
+}
+
+@mixin H5 {
+  @include font_basics;
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.171429rem;
+}
+
+@mixin H6 {
+  @include font_basics;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.128571rem;
+}
+
+@mixin font_overline {
+  @include font_name;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: 1rem;
+}
+
+@mixin font_sub_title {
+  @include font_basics;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.0928571rem;
+}
+
+@mixin font_body {
+  @include font_name;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+@mixin font_buttons {
+  @include font_basics;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+
+@mixin font_checkout_label {
+  @include font_name;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.0214286rem;
+}
+
+@mixin font_placeholder {
+  @include font_name;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.025rem;
+  opacity: 0.4;
+}
