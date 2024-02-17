@@ -1,23 +1,11 @@
 import { RouterModule, Routes } from '@angular/router';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { CompleteComponent } from './complete/complete.component';
 import { NgModule } from '@angular/core';
-import { CartModule } from './cart.module';
+import { CartComponent } from './cart.component';
 
 const routes: Routes = [
   {
-    path: 'cart',
-    component: CartModule,
-    children: [
-      {
-        path: 'checkout',
-        component: CheckoutComponent,
-      },
-      {
-        path: 'complete',
-        component: CompleteComponent,
-      },
-    ],
+    path: '',
+    component: CartComponent,
   },
 ];
 

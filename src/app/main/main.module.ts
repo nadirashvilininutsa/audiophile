@@ -5,8 +5,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ArticleComponent } from './article/article.component';
 import { ProductComponent } from './product/product.component';
 import { DetailsComponent } from './details/details.component';
-
-
+import { MainComponent } from './main.component';
+import { MainRoutingModule } from './main-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,10 +14,9 @@ import { DetailsComponent } from './details/details.component';
     CategoriesComponent,
     ArticleComponent,
     ProductComponent,
-    DetailsComponent
+    DetailsComponent,
+    MainComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule, MainRoutingModule],
 })
-export class MainModule { }
+export class MainModule {}
