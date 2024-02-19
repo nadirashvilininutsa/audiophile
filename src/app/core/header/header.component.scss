@@ -1,0 +1,73 @@
+@import "../../../scss/variables/colors.scss";
+@import "../../../scss/mixins/fonts.scss";
+
+.container {
+  background-color: $secondary_header_color;
+
+  .header {
+    padding: 2.4rem 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid $secondary_header_border;
+
+    .menu_list {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 4rem;
+
+    .header {
+      justify-content: flex-start;
+      padding: 3.2rem 0;
+
+      .header_logo {
+        margin-left: 4.2rem;
+        margin-right: auto;
+      }
+
+      .card_icon {
+        margin: auto 0 auto auto;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    padding: 0 16.5rem;
+
+    .header {
+      padding: 3.5rem 0;
+
+      .menu_icon {
+        display: none;
+      }
+
+      .header_logo {
+        margin-left: 0;
+      }
+
+      .menu_list {
+        display: flex;
+        width: 42.9rem;
+        justify-content: space-between;
+
+        p {
+          @include font_sub_title;
+          letter-spacing: 0.2rem;
+          color: $primary_color_white_plain;
+
+          &:hover {
+            color: $primary_color_dark_orange;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .card_icon {
+        margin-left: 30rem;
+      }
+    }
+  }
+}
