@@ -53,7 +53,10 @@
         width: 42.9rem;
         justify-content: space-between;
 
-        p {
+        button {
+          appearance: none;
+          background-color: transparent;
+          border: none;
           @include font_sub_title;
           letter-spacing: 0.2rem;
           color: $primary_color_white_plain;
@@ -61,6 +64,13 @@
           &:hover {
             color: $primary_color_dark_orange;
             cursor: pointer;
+          }
+
+          &.active {
+            color: $primary_color_dark_orange;
+            &:hover {
+              color: $primary_color_white_plain;
+            }
           }
         }
       }

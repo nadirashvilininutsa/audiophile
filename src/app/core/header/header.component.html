@@ -25,16 +25,16 @@
     </svg>
 
     <div class="menu_list">
-      <p routerLink="">home</p>
-      <p (click)="navigateToProducts(productCategories.headphones)">
+      <button routerLinkActive="active" routerLink="home">home</button>
+      <button routerLinkActive="active" routerLink="categories/:headphones">
         {{ productCategories.headphones }}
-      </p>
-      <p (click)="navigateToProducts(productCategories.speakers)">
+      </button>
+      <button routerLinkActive="active" routerLink="categories/:speakers">
         {{ productCategories.speakers }}
-      </p>
-      <p (click)="navigateToProducts(productCategories.earphones)">
+      </button>
+      <button routerLinkActive="active" routerLink="categories/:earphones">
         {{ productCategories.earphones }}
-      </p>
+      </button>
     </div>
 
     <svg

@@ -12,16 +12,17 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'categories',
+        path: 'home',
+        pathMatch: 'full',
+        component: PanelComponent,
+      },
+      {
+        path: 'categories/:product',
         component: CategoriesComponent,
       },
       {
         path: 'details',
         component: DetailsComponent,
-      },
-      {
-        path: '',
-        component: PanelComponent,
       },
       {
         path: 'product',
