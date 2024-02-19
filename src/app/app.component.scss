@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   padding-bottom: 12rem;
+  background-color: $primary_color_background;
 
   @media only screen and (min-width: 768px) {
     padding-bottom: 9.6rem;

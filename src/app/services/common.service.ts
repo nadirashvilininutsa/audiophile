@@ -6,6 +6,4 @@ import { ProductCategories } from '../models/api-models';
 })
 export class CommonService {
   constructor() {}
-
-  openedCategory: ProductCategories | undefined;
 }

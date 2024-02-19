@@ -1,0 +1,148 @@
+@import "../../../scss/variables/colors.scss";
+@import "../../../scss/mixins/fonts.scss";
+
+.footer_container {
+  background-color: $primary_color_black_1;
+  padding-bottom: 3.8rem;
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 4rem 4.6rem 3.9rem;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    padding: 0 16.5rem 4.8rem 16.5rem;
+    height: 36.5rem;
+  }
+
+  .footer_line {
+    width: 10.1rem;
+    height: 0.4rem;
+    background-color: $primary_color_dark_orange;
+    margin: 0 auto 4.8rem auto;
+
+    @media only screen and (min-width: 768px) {
+      margin-left: 0;
+      margin-bottom: 5.6rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-bottom: 7.1rem;
+    }
+  }
+
+  .footer_logo {
+    display: block;
+    margin: 0 auto 4.8rem auto;
+
+    @media only screen and (min-width: 768px) {
+      margin: 0 auto 3.2rem 0;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-bottom: 3.6rem;
+      float: left;
+    }
+  }
+
+  .footer_menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    margin: 0;
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      column-gap: 3.4rem;
+      justify-content: flex-start;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      float: right;
+      margin-right: 0.2rem;
+    }
+  }
+
+  button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0 auto;
+    @include font_sub_title;
+    letter-spacing: 0.2rem;
+    color: $primary_color_white_plain;
+
+    &:hover {
+      color: $primary_color_dark_orange;
+      cursor: pointer;
+    }
+
+    &.active {
+      color: $primary_color_dark_orange;
+      &:hover {
+        color: $primary_color_white_plain;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  .footer_about_info {
+    margin: 4.8rem auto;
+    width: 32.7rem;
+    @include font_body;
+    color: $primary_color_white_plain;
+    opacity: 0.5;
+    text-align: center;
+
+    @media only screen and (min-width: 768px) {
+      margin: 3.2rem 0 8rem 0;
+      width: auto;
+      text-align: justify;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-top: 16.1rem;
+      margin-top: 13.2rem;
+
+      width: 54rem;
+      width: 48rem;
+      text-align: left;
+    }
+  }
+
+  .footer_copyright {
+    margin: 0 auto;
+    @include font_body;
+    font-weight: 700;
+    color: $primary_color_white_plain;
+    opacity: 0.5;
+    text-align: center;
+
+    @media only screen and (min-width: 768px) {
+      margin: 0;
+      float: left;
+    }
+  }
+
+  .footer_logos {
+    margin: 4.8rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin: 0;
+      justify-content: right;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-top: -8.7rem;
+    }
+  }
+}
