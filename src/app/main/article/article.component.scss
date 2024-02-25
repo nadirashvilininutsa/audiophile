@@ -1,0 +1,74 @@
+@import "../../../scss/mixins/fonts.scss";
+@import "../../../scss/variables/colors.scss";
+
+.container {
+  margin: 12rem auto 0 auto;
+  border: 0.1px solid $primary_color_background;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 9.6rem;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    margin-top: 20rem;
+    height: 58.8rem;
+  }
+
+  picture img {
+    display: block;
+    margin: 0 auto;
+    width: 32.7rem;
+    height: 30rem;
+    border-radius: 0.8rem;
+
+    @media only screen and (min-width: 768px) {
+      width: 68.9rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 54rem;
+      height: 58.8rem;
+      float: right;
+      margin-right: 16.5rem;
+    }
+  }
+
+  h4 {
+    @include H4;
+    letter-spacing: 0.1rem;
+    margin: 4rem auto 3.2rem auto;
+    text-align: center;
+
+    @media only screen and (min-width: 768px) {
+      @include H2;
+      letter-spacing: 0.142857rem;
+      margin-top: 6.3rem;
+      width: 57.3rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-top: 14.7rem;
+      margin-left: 16.5rem;
+      width: 44.5rem;
+      text-align: left;
+    }
+  }
+
+  p {
+    width: 32.7rem;
+    margin: 0 auto;
+    @include font_body;
+    opacity: 0.5;
+    text-align: center;
+
+    @media only screen and (min-width: 768px) {
+      width: 57.3rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin-left: 16.5rem;
+      width: 44.5rem;
+      text-align: left;
+    }
+  }
+}

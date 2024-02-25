@@ -11,17 +11,13 @@ import { CommonService } from 'src/app/services/common.service';
 export class CategoriesComponent {
   constructor(private commonService: CommonService) {}
 
-  productList: Observable<Categories[]> | undefined;
+  productList$: Observable<Categories[]> | undefined;
 
   getCategories(): Observable<Categories[]> {
     return this.commonService.getProducts();
   }
 
   ngOnInit() {
-    this.productList = this.getCategories();
-    console.log('bla');
-    this.productList
-      .pipe(tap((x) => console.log(x)))
-      .subscribe((x) => console.log(x));
+    this.productList$ = this.getCategories();
   }
 }

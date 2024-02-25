@@ -1,1 +1,9 @@
-<p>article works!</p>
+<div class="container" *ngFor="let article of articles$ | async">
+  <picture>
+    <source media="(min-width: 1440px)" [srcset]="article.img.desktop" />
+    <source media="(min-width: 768px)" [srcset]="article.img.tablet" />
+    <img [src]="article.img.mobile" alt="description" />
+  </picture>
+  <h4>{{ article.title }}</h4>
+  <p>{{ article.article }}</p>
+</div>

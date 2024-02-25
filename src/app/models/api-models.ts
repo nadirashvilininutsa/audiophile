@@ -16,16 +16,16 @@ export interface Article {
   img: ImgUrls;
 }
 
-export interface CommercialItem {
-  img: ImgUrls;
-  title: string;
-  description: string;
-}
-
 export interface Commercial {
   '1': CommercialItem;
   '2': CommercialItem;
   '3': CommercialItem;
+}
+
+export interface CommercialItem {
+  img: ImgUrls;
+  title: string;
+  description: string;
 }
 
 export interface ProductPhotos {
@@ -51,7 +51,7 @@ export interface Product {
 }
 
 export interface Categories {
-  product: ProductCategories;
+  product: string;
   models: Product[];
   img: ImgUrls;
 }
