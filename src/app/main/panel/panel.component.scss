@@ -2,6 +2,102 @@
 @import "../../../scss/mixins/fonts.scss";
 @import "../../../scss/mixins/button_mixins.scss";
 
+.new_product {
+  position: relative;
+  border-top: 0.1rem solid $secondary_header_color;
+  margin: -9rem auto 0 auto;
+
+  picture img {
+    height: 60rem;
+    width: 37.5rem;
+    z-index: 1;
+
+    @media only screen and (min-width: 768px) {
+      height: 72.9rem;
+      width: 76.8rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 144rem;
+    }
+  }
+
+  .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    h6 {
+      margin: 19.8rem auto 1.6rem auto;
+      @include font_overline;
+      color: $primary_color_white_plain;
+      opacity: 0.5;
+      text-align: center;
+
+      @media only screen and (min-width: 768px) {
+        margin: 21.6rem auto 2.4rem auto;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        margin: 22.5rem auto 2.4rem 16.5rem;
+        text-align: left;
+      }
+    }
+
+    h2 {
+      margin: 0 auto;
+      @include font_basics;
+      font-size: 3.6rem;
+      line-height: 4rem;
+      text-align: center;
+      letter-spacing: 0.128571rem;
+      color: $primary_color_white_plain;
+
+      @media only screen and (min-width: 768px) {
+        @include H1;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        width: 42rem;
+        margin-left: 16.5rem;
+        text-align: left;
+      }
+    }
+
+    p {
+      width: 32.8rem;
+      margin: 2.4rem auto 2.8rem auto;
+
+      @include font_body;
+      text-transform: none;
+      color: $primary_color_white_plain;
+      opacity: 0.75;
+      text-align: center;
+
+      @media only screen and (min-width: 768px) {
+        width: 34.9rem;
+        margin-bottom: 4rem;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        width: 34.9rem;
+        margin-left: 16.5rem;
+        text-align: left;
+      }
+    }
+
+    .btn_primary {
+      display: block;
+      margin: 0 auto;
+      @include btn_primary;
+
+      @media only screen and (min-width: 1440px) {
+        margin-left: 16.5rem;
+      }
+    }
+  }
+}
+
 .commercials {
   margin: 12rem auto 0 auto;
   width: 32.7rem;

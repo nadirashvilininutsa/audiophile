@@ -56,8 +56,16 @@ export interface Categories {
   img: ImgUrls;
 }
 
+export interface NewProduct {
+  newProduct: boolean;
+  title: string;
+  description: string;
+  img: ImgUrls;
+}
+
 export interface InfoFromBack {
   categories: Categories[];
   commercial: Commercial;
   articles: Article[];
+  newProduct: NewProduct;
 }
