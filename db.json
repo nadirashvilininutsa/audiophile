@@ -199,5 +199,15 @@
         "tablet": "../assets/shared/tablet/image-best-gear.jpg"
       }
     }
-  ]
+  ],
+  "newProduct": {
+    "newProduct": true,
+    "title": "XX99 mark II headphones",
+    "description": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
+    "img": {
+      "desktop": "../assets/home/desktop/image-hero.jpg",
+      "mobile": "../assets/home/mobile/image-header.jpg",
+      "tablet": "../assets/home/tablet/image-header.jpg"
+    }
+  }
 }

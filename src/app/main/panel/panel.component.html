@@ -1,3 +1,18 @@
+<div class="new_product" *ngIf="newProduct$ | async as newProduct">
+  <picture>
+    <source media="(min-width: 1440px)" [srcset]="newProduct.img.desktop" />
+    <source media="(min-width: 768px)" [srcset]="newProduct.img.tablet" />
+    <img [src]="newProduct.img.mobile" alt="description" />
+  </picture>
+
+  <div class="info">
+    <h6 *ngIf="newProduct.newProduct">New product</h6>
+    <h2>{{ newProduct.title }}</h2>
+    <p>{{ newProduct.description }}</p>
+    <button class="btn_primary">see product</button>
+  </div>
+</div>
+
 <app-categories></app-categories>
 
 <div class="commercials" *ngIf="commercials$ | async as commercials">

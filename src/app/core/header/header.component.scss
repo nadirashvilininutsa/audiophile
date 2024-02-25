@@ -2,6 +2,8 @@
 @import "../../../scss/mixins/fonts.scss";
 
 .container {
+  position: relative;
+  z-index: 10;
   background-color: $secondary_header_color;
 
   .header {
