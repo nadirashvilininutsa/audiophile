@@ -1,7 +1,7 @@
 <div class="all_products">
-  <div *ngFor="let productList of productList | async" class="container">
+  <div *ngFor="let productList of productList$ | async" class="container">
     <div class="product">
-      <img src="{{ productList.img.desktop }}" alt="" />
+      <img [src]="productList.img.desktop" alt="" />
       <h6>{{ productList.product }}</h6>
       <button class="button">
         shop
