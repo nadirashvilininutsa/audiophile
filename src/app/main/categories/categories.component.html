@@ -1,1 +1,20 @@
-<p>categories works!</p>
+<div class="all_products">
+  <div *ngFor="let productList of productList | async" class="container">
+    <div class="product">
+      <img src="{{ productList.img.desktop }}" alt="" />
+      <h6>{{ productList.product }}</h6>
+      <button class="button">
+        shop
+        <svg width="8" height="12" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.322 1l5 5-5 5"
+            stroke="#D87D4A"
+            stroke-width="2"
+            fill="none"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
