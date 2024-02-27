@@ -3,7 +3,10 @@
     <div class="product">
       <img [src]="productList.img.desktop" alt="" />
       <h6>{{ productList.product }}</h6>
-      <button class="button">
+      <button
+        class="button"
+        [routerLink]="'/categories/' + productList.product"
+      >
         shop
         <svg width="8" height="12" xmlns="http://www.w3.org/2000/svg">
           <path
