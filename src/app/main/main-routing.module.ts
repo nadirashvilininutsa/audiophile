@@ -21,7 +21,7 @@ const routes: Routes = [
         component: ProductComponent,
       },
       {
-        path: 'details',
+        path: 'details/:model',
         component: DetailsComponent,
       },
       // {

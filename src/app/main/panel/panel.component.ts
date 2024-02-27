@@ -22,6 +22,10 @@ export class PanelComponent {
     return this.commonService.getNewProduct();
   }
 
+  navigateTo(model: string) {
+    this.commonService.navigateTo(model);
+  }
+
   ngOnInit() {
     this.commercials$ = this.getCommercials();
     this.newProduct$ = this.getNewProduct();

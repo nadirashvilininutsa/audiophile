@@ -7,12 +7,13 @@ import {
 } from '../models/api-models';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CommonService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   getProducts() {
     return this.http.get<Categories[]>(
@@ -34,5 +35,10 @@ export class CommonService {
     return this.http.get<ProductBasics>(
       `${environment.jsonServerBase}/newProduct`
     );
+  }
+
+  navigateTo(model: string) {
+    const modelUrl: string = model.split(' ').join('-');
+    this.router.navigate([`details/${modelUrl}`]);
   }
 }
