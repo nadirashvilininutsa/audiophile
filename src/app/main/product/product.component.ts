@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, Subscription, filter, map, switchMap, tap } from 'rxjs';
 import {
   Categories,
@@ -16,7 +16,7 @@ import { CommonService } from 'src/app/services/common.service';
 export class ProductComponent {
   constructor(
     private activatedRoute: ActivatedRoute,
-    private commonService: CommonService
+    private commonService: CommonService // private router: Router
   ) {}
 
   private paramsSubscription: Subscription | undefined;
@@ -32,6 +32,10 @@ export class ProductComponent {
       ),
       map((category) => category.models)
     );
+  }
+
+  navigateTo(model: string) {
+    this.commonService.navigateTo(model);
   }
 
   ngOnInit() {

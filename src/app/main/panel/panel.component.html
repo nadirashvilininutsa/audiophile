@@ -9,7 +9,9 @@
     <h6 *ngIf="newProduct.newProduct">New product</h6>
     <h2>{{ newProduct.title }}</h2>
     <p>{{ newProduct.description }}</p>
-    <button class="btn_primary">see product</button>
+    <button class="btn_primary" (click)="navigateTo(newProduct.title)">
+      see product
+    </button>
   </div>
 </div>
 
@@ -20,7 +22,7 @@
     <img [src]="commercials[1].img.desktop" alt="" />
     <h6>{{ commercials[1].title }}</h6>
     <p>{{ commercials[1].description }}</p>
-    <button>see product</button>
+    <button (click)="navigateTo(commercials[1].title)">see product</button>
   </div>
 
   <div class="product_2">
@@ -38,7 +40,7 @@
     </picture>
     <div class="info">
       <h6>{{ commercials[2].title }}</h6>
-      <button>see product</button>
+      <button (click)="navigateTo(commercials[2].title)">see product</button>
     </div>
   </div>
 
@@ -54,7 +56,7 @@
 
   <div class="product_3">
     <h6>{{ commercials[3].title }}</h6>
-    <button>see product</button>
+    <button (click)="navigateTo(commercials[3].title)">see product</button>
   </div>
 </div>
 
