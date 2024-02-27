@@ -3,7 +3,7 @@ import {
   Article,
   Categories,
   Commercial,
-  NewProduct,
+  ProductBasics,
 } from '../models/api-models';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -31,7 +31,7 @@ export class CommonService {
   }
 
   getNewProduct() {
-    return this.http.get<NewProduct>(
+    return this.http.get<ProductBasics>(
       `${environment.jsonServerBase}/newProduct`
     );
   }

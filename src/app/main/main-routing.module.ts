@@ -18,16 +18,16 @@ const routes: Routes = [
       },
       {
         path: 'categories/:product',
-        component: CategoriesComponent,
+        component: ProductComponent,
       },
       {
         path: 'details',
         component: DetailsComponent,
       },
-      {
-        path: 'product',
-        component: ProductComponent,
-      },
+      // {
+      //   path: 'product',
+      //   component: ProductComponent,
+      // },
     ],
   },
 ];

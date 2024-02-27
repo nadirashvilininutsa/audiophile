@@ -26,13 +26,22 @@
 
     <div class="menu_list">
       <button routerLinkActive="active" routerLink="home">home</button>
-      <button routerLinkActive="active" routerLink="categories/:headphones">
+      <button
+        routerLinkActive="active"
+        [routerLink]="'categories/' + productCategories.headphones"
+      >
         {{ productCategories.headphones }}
       </button>
-      <button routerLinkActive="active" routerLink="categories/:speakers">
+      <button
+        routerLinkActive="active"
+        [routerLink]="'categories/' + productCategories.speakers"
+      >
         {{ productCategories.speakers }}
       </button>
-      <button routerLinkActive="active" routerLink="categories/:earphones">
+      <button
+        routerLinkActive="active"
+        [routerLink]="'categories/' + productCategories.earphones"
+      >
         {{ productCategories.earphones }}
       </button>
     </div>

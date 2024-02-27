@@ -39,11 +39,14 @@ export interface InTheBox {
   item: string;
 }
 
-export interface Product {
+export interface ProductBasics {
   newProduct: boolean;
   title: string;
   description: string;
   img: ImgUrls;
+}
+
+export interface Product extends ProductBasics {
   price: number;
   features: string;
   inTheBox: InTheBox[];
@@ -56,16 +59,9 @@ export interface Categories {
   img: ImgUrls;
 }
 
-export interface NewProduct {
-  newProduct: boolean;
-  title: string;
-  description: string;
-  img: ImgUrls;
-}
-
 export interface InfoFromBack {
   categories: Categories[];
   commercial: Commercial;
   articles: Article[];
-  newProduct: NewProduct;
+  newProduct: ProductBasics;
 }

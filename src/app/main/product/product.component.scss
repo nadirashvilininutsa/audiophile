@@ -1,0 +1,137 @@
+@import "../../../scss/mixins/fonts.scss";
+@import "../../../scss/mixins/button_mixins.scss";
+@import "../../../scss/variables/colors.scss";
+
+.category {
+  background-color: $secondary_header_color;
+  margin: 0;
+  @include H4;
+  line-height: 10.2rem;
+  color: $primary_color_white_plain;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    @include H2;
+    line-height: 23.9rem;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    line-height: 24.6rem;
+  }
+}
+
+.product {
+  width: 32.7rem;
+  margin: 6.4rem auto 0 auto;
+
+  img {
+    height: 35.2rem;
+    border-radius: 0.8rem;
+    margin: 0;
+  }
+
+  .info {
+    margin-top: 3.2rem;
+    margin-bottom: 12rem;
+
+    .new {
+      @include font_overline;
+      color: $primary_color_dark_orange;
+      text-align: center;
+      margin-bottom: 2.4rem;
+    }
+
+    h4 {
+      @include H4;
+      letter-spacing: 0.1rem;
+      color: $primary_color_black_1;
+      text-align: center;
+      margin-bottom: 2.4rem;
+    }
+
+    .description {
+      @include font_body;
+      opacity: 0.5;
+      color: $primary_color_black_1;
+      text-align: center;
+      margin-bottom: 2.4rem;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      @include btn_primary;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 68.9rem;
+    margin-top: 12rem;
+
+    .info {
+      margin-top: 5.2rem;
+
+      .new {
+        margin-bottom: 1.6rem;
+      }
+
+      h4 {
+        @include H2;
+        margin-bottom: 3.2rem;
+        width: 57.2rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .description {
+        width: 57.2rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    width: 111rem;
+    margin-top: 16rem;
+    display: flex;
+    justify-content: space-between;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    img {
+      height: 56rem;
+      width: 54rem;
+    }
+
+    .info {
+      margin-top: 12.6rem;
+      margin-bottom: 12.6rem;
+
+      .new {
+        margin-top: -1.7rem;
+        text-align: left;
+        margin-bottom: 1.6rem;
+      }
+
+      h4 {
+        text-align: left;
+        width: 34.5rem;
+        margin-left: 0;
+        margin-top: 0;
+      }
+
+      .description {
+        text-align: left;
+        width: 44.5rem;
+        margin-left: 0;
+      }
+
+      button {
+        margin-left: 0;
+      }
+    }
+  }
+}
