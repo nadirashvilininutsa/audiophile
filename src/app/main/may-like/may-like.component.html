@@ -1,1 +1,24 @@
-<p>may-like works!</p>
+<h3 class="may_also_like">you may also like</h3>
+<div class="container">
+  <div *ngFor="let product of randomProducts$ | async">
+    <picture>
+      <source media="(min-width: 1440px)" [srcset]="product.mayLike.desktop" />
+      <source media="(min-width: 768px)" [srcset]="product.mayLike.tablet" />
+      <img [src]="product.mayLike.mobile" [alt]="product.title + ' photo'" />
+    </picture>
+    <h3>{{ product.title }}</h3>
+    <button>see product</button>
+  </div>
+
+  <!-- <div>
+    <div class="other_products_xx59"></div>
+    <h3>xx59</h3>
+    <button>see product</button>
+  </div>
+
+  <div>
+    <div class="other_products_zx9"></div>
+    <h3>zx9 speaker</h3>
+    <button>see product</button>
+  </div> -->
+</div>

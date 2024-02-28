@@ -36,19 +36,7 @@ export class DetailsComponent {
     this.productQuantity = 1;
   }
 
-  // getAllProducts(): Observable<Product> {
-  getAllProducts() {
-    return this.commonService
-      .getProducts()
-      .pipe(
-        concatMap((products) => products),
-        mergeMap((product) => product.models)
-      )
-      .subscribe((x) => console.log(x));
-  }
-
   getProductDetails(productModel: string): Observable<Product> {
-    // productModel = productModel.toLowerCase();
     return this.commonService.getProducts().pipe(
       concatMap((products) => products),
       mergeMap((product) => product.models),
@@ -61,10 +49,6 @@ export class DetailsComponent {
       })
     );
   }
-
-  // navigateTo(model: string) {
-  //   this.commonService.navigateTo(model);
-  // }
 
   addBreakToTitle(title: string): string {
     const words = title.split(' ');
@@ -92,8 +76,6 @@ export class DetailsComponent {
 
       this.productTitle = this.addBreakToTitle(productModel);
       this.productDetails$ = this.getProductDetails(productModel);
-
-      this.getAllProducts();
     });
   }
 

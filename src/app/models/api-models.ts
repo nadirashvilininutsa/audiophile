@@ -48,6 +48,7 @@ export interface ProductBasics {
 
 export interface Product extends ProductBasics {
   detailImg: ImgUrls;
+  mayLike: ImgUrls;
   price: string;
   features: string;
   // inTheBox: InTheBox[];

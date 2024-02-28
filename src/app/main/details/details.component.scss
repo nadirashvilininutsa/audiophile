@@ -2,48 +2,6 @@
 @import "../../../scss/mixins/button_mixins.scss";
 @import "../../../scss/variables/colors.scss";
 
-// .other_products {
-//   .other_products_xx99_old {
-//     background-image: url("../assets/shared/mobile/image-xx99-mark-one-headphones.jpg");
-//   }
-
-//   .other_products_xx59 {
-//     background-image: url("../assets/shared/mobile/image-xx59-headphones.jpg");
-//   }
-
-//   .other_products_zx9 {
-//     background-image: url("../assets/shared/mobile/image-zx9-speaker.jpg");
-//   }
-
-//   @media only screen and (min-width: 768px) {
-//     .other_products_xx99_old {
-//       background-image: url("../assets/shared/tablet/image-xx99-mark-one-headphones.jpg");
-//     }
-
-//     .other_products_xx59 {
-//       background-image: url("../assets/shared/tablet/image-xx59-headphones.jpg");
-//     }
-
-//     .other_products_zx9 {
-//       background-image: url("../assets/shared/tablet/image-zx9-speaker.jpg");
-//     }
-//   }
-
-//   @media only screen and (min-width: 1440px) {
-//     .other_products_xx99_old {
-//       background-image: url("../assets/shared/desktop/image-xx99-mark-one-headphones.jpg");
-//     }
-
-//     .other_products_xx59 {
-//       background-image: url("../assets/shared/desktop/image-xx59-headphones.jpg");
-//     }
-
-//     .other_products_zx9 {
-//       background-image: url("../assets/shared/desktop/image-zx9-speaker.jpg");
-//     }
-//   }
-// }
-
 .body {
   padding: 0 2.4rem;
   @media only screen and (min-width: 768px) {
@@ -232,7 +190,6 @@
   }
 }
 
-//
 .additional_info {
   width: 32.7rem;
   margin: 0 auto;
@@ -314,7 +271,6 @@
   }
 }
 
-//
 .product_photos {
   margin: 8.8rem auto 12rem auto;
 
@@ -368,24 +324,3 @@
     }
   }
 }
-
-//
-// .may_also_like {
-//   @include font_basics;
-//   font-size: 2.4rem;
-//   line-height: 3.6rem;
-//   letter-spacing: 0.0857143rem;
-//   color: $primary_color_black_1;
-//   text-align: center;
-
-//   @media only screen and (min-width: 768px) {
-//     @include H3;
-//     margin-bottom: 5.6rem;
-//   }
-
-//   @media only screen and (min-width: 1440px) {
-//     margin-bottom: 6.4rem;
-//   }
-// }
-
-//
