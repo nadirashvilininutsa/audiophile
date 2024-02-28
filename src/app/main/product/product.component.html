@@ -7,9 +7,9 @@
     [class.reverse]="i % 2 !== 0"
   >
     <picture>
-      <source media="(min-width: 1440px)" [srcset]="model.img.desktop" />
-      <source media="(min-width: 768px)" [srcset]="model.img.tablet" />
-      <img [src]="model.img.mobile" [alt]="model.title + ' photo'" />
+      <source media="(min-width: 1440px)" [srcset]="model.previewImg.desktop" />
+      <source media="(min-width: 768px)" [srcset]="model.previewImg.tablet" />
+      <img [src]="model.previewImg.mobile" [alt]="model.title + ' photo'" />
     </picture>
 
     <div class="info">
