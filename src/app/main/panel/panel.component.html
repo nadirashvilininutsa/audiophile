@@ -1,8 +1,14 @@
 <div class="new_product" *ngIf="newProduct$ | async as newProduct">
   <picture>
-    <source media="(min-width: 1440px)" [srcset]="newProduct.img.desktop" />
-    <source media="(min-width: 768px)" [srcset]="newProduct.img.tablet" />
-    <img [src]="newProduct.img.mobile" alt="description" />
+    <source
+      media="(min-width: 1440px)"
+      [srcset]="newProduct.previewImg.desktop"
+    />
+    <source
+      media="(min-width: 768px)"
+      [srcset]="newProduct.previewImg.tablet"
+    />
+    <img [src]="newProduct.previewImg.mobile" alt="description" />
   </picture>
 
   <div class="info">

@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { DetailsComponent } from './details/details.component';
 import { MainComponent } from './main.component';
 import { MainRoutingModule } from './main-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { MainRoutingModule } from './main-routing.module';
     DetailsComponent,
     MainComponent,
   ],
-  imports: [CommonModule, MainRoutingModule],
+  imports: [CommonModule, MainRoutingModule, FormsModule],
 })
 export class MainModule {}

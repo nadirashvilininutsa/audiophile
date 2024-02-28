@@ -24,10 +24,6 @@ const routes: Routes = [
         path: 'details/:model',
         component: DetailsComponent,
       },
-      // {
-      //   path: 'product',
-      //   component: ProductComponent,
-      // },
     ],
   },
 ];

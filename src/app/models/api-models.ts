@@ -34,22 +34,24 @@ export interface ProductPhotos {
   3: ImgUrls;
 }
 
-export interface InTheBox {
-  quantity: number;
-  item: string;
-}
+// export interface InTheBox {
+//   quantity: number;
+//   item: string;
+// }
 
 export interface ProductBasics {
   newProduct: boolean;
   title: string;
   description: string;
-  img: ImgUrls;
+  previewImg: ImgUrls;
 }
 
 export interface Product extends ProductBasics {
-  price: number;
+  detailImg: ImgUrls;
+  price: string;
   features: string;
-  inTheBox: InTheBox[];
+  // inTheBox: InTheBox[];
+  inTheBox: string[];
   photos: ProductPhotos;
 }
 

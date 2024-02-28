@@ -1,1 +1,127 @@
-<p>details works!</p>
+<div class="body" *ngIf="productDetails$ | async as product">
+  <button class="go_back">Go Back</button>
+
+  <div class="description_box">
+    <picture>
+      <source
+        media="(min-width: 1440px)"
+        [srcset]="product.detailImg.desktop"
+      />
+      <source media="(min-width: 768px)" [srcset]="product.detailImg.tablet" />
+      <img
+        class="product_img"
+        [src]="product.detailImg.mobile"
+        [alt]="product.title + ' photo'"
+      />
+    </picture>
+
+    <div class="product_description">
+      <p class="new" *ngIf="product.newProduct">new product</p>
+      <h4 [innerHTML]="productTitle"></h4>
+
+      <p class="description">
+        {{ product.description }}
+      </p>
+      <h6 class="price">{{ product.price }}</h6>
+
+      <div class="buttons_box">
+        <div class="quantity">
+          <button class="minus" (click)="changeQuantity(-1)">-</button>
+          <p class="amount">{{ productQuantity }}</p>
+          <button class="plus" (click)="changeQuantity(1)">+</button>
+        </div>
+        <button (click)="addToCart(product)">add to cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="additional_info">
+    <div class="features">
+      <h4>features</h4>
+      <p [innerHTML]="product.features"></p>
+    </div>
+
+    <h4>in the box</h4>
+
+    <div class="in_box_items">
+      <div *ngFor="let item of product.inTheBox">
+        <p class="quantity">{{ item[0] }}x</p>
+        <p class="item">{{ item[1] }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="product_photos">
+    <div class="photo_1">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          [srcset]="product.photos[1].desktop"
+        />
+        <source
+          media="(min-width: 768px)"
+          [srcset]="product.photos[1].tablet"
+        />
+        <img
+          [src]="product.photos[1].mobile"
+          [alt]="product.title + ' photo'"
+        />
+      </picture>
+    </div>
+
+    <div class="photo_2">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          [srcset]="product.photos[2].desktop"
+        />
+        <source
+          media="(min-width: 768px)"
+          [srcset]="product.photos[2].tablet"
+        />
+        <img
+          [src]="product.photos[2].mobile"
+          [alt]="product.title + ' photo'"
+        />
+      </picture>
+    </div>
+
+    <div class="photo_3">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          [srcset]="product.photos[3].desktop"
+        />
+        <source
+          media="(min-width: 768px)"
+          [srcset]="product.photos[3].tablet"
+        />
+        <img
+          [src]="product.photos[3].mobile"
+          [alt]="product.title + ' photo'"
+        />
+      </picture>
+    </div>
+  </div>
+
+  <!-- <h3 class="may_also_like">you may also like</h3>
+  <div class="other_products">
+    <div>
+      <div class="other_products_xx99_old"></div>
+      <h3>xx99 mark i</h3>
+      <button>see product</button>
+    </div>
+
+    <div>
+      <div class="other_products_xx59"></div>
+      <h3>xx59</h3>
+      <button>see product</button>
+    </div>
+
+    <div>
+      <div class="other_products_zx9"></div>
+      <h3>zx9 speaker</h3>
+      <button>see product</button>
+    </div>
+  </div> -->
+</div>
