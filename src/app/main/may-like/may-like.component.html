@@ -7,18 +7,6 @@
       <img [src]="product.mayLike.mobile" [alt]="product.title + ' photo'" />
     </picture>
     <h3>{{ product.title }}</h3>
-    <button>see product</button>
+    <button (click)="navigateTo(product.title)">see product</button>
   </div>
-
-  <!-- <div>
-    <div class="other_products_xx59"></div>
-    <h3>xx59</h3>
-    <button>see product</button>
-  </div>
-
-  <div>
-    <div class="other_products_zx9"></div>
-    <h3>zx9 speaker</h3>
-    <button>see product</button>
-  </div> -->
 </div>

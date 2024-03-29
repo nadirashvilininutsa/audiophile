@@ -16,6 +16,22 @@
     .menu_list {
       display: none;
     }
+
+    .header_logo,
+    .card_icon,
+    .menu_icon {
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover path {
+        fill: $primary_color_dark_orange;
+      }
+    }
   }
 
   @media only screen and (min-width: 768px) {

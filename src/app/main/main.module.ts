@@ -9,6 +9,7 @@ import { MainComponent } from './main.component';
 import { MainRoutingModule } from './main-routing.module';
 import { FormsModule } from '@angular/forms';
 import { MayLikeComponent } from './may-like/may-like.component';
+import { CommercialComponent } from './commercial/commercial.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MayLikeComponent } from './may-like/may-like.component';
     DetailsComponent,
     MainComponent,
     MayLikeComponent,
+    CommercialComponent,
   ],
   imports: [CommonModule, MainRoutingModule, FormsModule],
 })
