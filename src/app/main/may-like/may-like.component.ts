@@ -55,9 +55,9 @@ export class MayLikeComponent {
     );
   }
 
-  // navigateTo(model: string) {
-  //   this.commonService.navigateTo(model);
-  // }
+  navigateTo(model: string) {
+    this.commonService.navigateTo(model);
+  }
 
   ngOnInit() {
     this.randomProducts$ = this.getRandomProducts();

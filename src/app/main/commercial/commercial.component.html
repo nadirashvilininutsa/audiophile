@@ -1,0 +1,42 @@
+<div class="commercials" *ngIf="commercials$ | async as commercials">
+  <div class="product_1">
+    <img [src]="commercials[1].img.desktop" alt="" />
+    <h6>{{ commercials[1].title }}</h6>
+    <p>{{ commercials[1].description }}</p>
+    <button (click)="navigateTo(commercials[1].title)">see product</button>
+  </div>
+
+  <div class="product_2">
+    <picture>
+      <source
+        media="(min-width: 1440px)"
+        [srcset]="commercials[2].img.desktop"
+      />
+      <source media="(min-width: 768px)" [srcset]="commercials[2].img.tablet" />
+      <img
+        class="earphone_photo"
+        [src]="commercials[2].img.mobile"
+        alt="description"
+      />
+    </picture>
+    <div class="info">
+      <h6>{{ commercials[2].title }}</h6>
+      <button (click)="navigateTo(commercials[2].title)">see product</button>
+    </div>
+  </div>
+
+  <picture>
+    <source media="(min-width: 1440px)" [srcset]="commercials[3].img.desktop" />
+    <source media="(min-width: 768px)" [srcset]="commercials[3].img.tablet" />
+    <img
+      class="earphone_photo"
+      [src]="commercials[3].img.mobile"
+      alt="description"
+    />
+  </picture>
+
+  <div class="product_3">
+    <h6>{{ commercials[3].title }}</h6>
+    <button (click)="navigateTo(commercials[3].title)">see product</button>
+  </div>
+</div>
